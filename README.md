@@ -1,53 +1,36 @@
 # Diffusion Face Privacy & Emotion Preservation
 
-Research implementation and frozen evidence for a Master's thesis on diffusion-based face identity obfuscation with emotion preservation. **Historical experiments are archived, but the final thesis release is NOT frozen.** A new, independently pinned end-to-end experimental reproduction has been requested; its results must be verified before replacing thesis tables. No clinical anonymization claim is made.
+Research implementation and verified **held-out experimental evidence** for an MSc thesis on face identity obfuscation using pretrained diffusion models, while preserving facial emotion.
 
-## Historical executed evidence — not the final rerun
+## Current research evidence (2026-10-14)
 
-| Component | Status |
-| --- | --- |
-| N07 AffectNet baseline | Executed: 120 source images, 600 synthetic images |
-| N12 v3 / N19 ArcFace and AuraFace | Executed; corrected biometric pipeline |
-| N16 / N18 NIQE | Executed |
-| N17 v2 neutral-target | Executed: 12 sources, two seeds, 24 synthetic images |
-| N21 exact N07 two-ViT FER ensemble | Executed: 12/12 original predictions reproduced, 24/24 N17 images evaluated |
-| N22 / N22b visual screenshot review | Provisional AI-assisted observations: 19 PASS, 5 UNCERTAIN, 0 FAIL; **not** independent full-resolution human QC |
+**Generation and automated evaluation complete; limited human visual QC complete. Thesis conclusions remain conditional on the [Final Scientific Audit](docs/final_scientific_audit_nb24.md).** This is not clinical validation or proof of irreversible anonymization.
 
-The N21 exact ensemble **supersedes N20** (single ViT and a different preservation definition). Never cite the N20 FER delta as the final paired outcome.
+| Stage | Protocol | Verified result |
+| --- | --- | --- |
+| Generate | [NB23 FlowEdit / SD3-Medium](notebooks/23_confirmed_heldout_regeneration.ipynb) | **324/324 verified** synthetic 512×512 images: 108 held-out AffectNet sources × 3 conditions × seed 42 |
+| Evaluate | [NB24 unified frozen evaluators](notebooks/24_unified_heldout_evaluation.ipynb) | **324/324** paired valid ArcFace and AuraFace scores; **324/324** NIQE; **108/108** original FER predictions reproduced |
+| Analyze | [Conditions](results/nb24_heldout_aggregate_by_condition.csv); [paired contrasts](results/nb24_heldout_paired_contrasts.csv) | 108 paired independent source units; source-level bootstrap, 10,000 draws |
+| Human visual QC | [Limited QC summary](results/nb24_manual_qc_aggregate.csv) | **12 held-out source faces, 36 synthetic images** reviewed by one assessor; exploratory, non-random source-ID selection |
+| Scientific review | [Final Scientific Audit](docs/final_scientific_audit_nb24.md) | Scope, supported findings, unresolved validity limits and release checklist |
 
-## Historical exploratory pilot findings (N17 minus matched N07)
+**Key result:** Moving from guidance 4.5 to 5.5 reduces mean source–synthetic ArcFace cosine by **0.1992** (paired 95% CI [−0.2231, −0.1775]) and AuraFace cosine by **0.1776** (CI [−0.1983, −0.1586]). Human-label FER accuracy changes from **57.41% to 62.04%**, but the +4.63 percentage-point contrast has CI **[−2.78, +12.04] pp**. This supports *lower embedding similarity*, **not** proof of a general utility improvement or a calibrated re-identification rate.
 
-| Metric | Mean paired difference | 95% source-cluster bootstrap CI |
-| --- | ---: | ---: |
-| Emotion preserved, percentage points | -54.17 | [-79.17, -29.17] |
-| ArcFace cosine similarity | -0.00637 | [-0.10970, 0.07983] |
-| AuraFace cosine similarity | -0.05917 | [-0.15663, 0.02895] |
-| NIQE | +0.19239 | [0.00385, 0.42891] |
+The emotion-agnostic **same-expression** condition achieves **16.67%** human-label FER accuracy. Review [audit limitations](docs/final_scientific_audit_nb24.md) before attributing this result solely to failed expression preservation; the qualitative task and automated label task are different.
 
-Emotion preservation denotes agreement of **generated two-ViT ensemble prediction with the human target emotion**, not agreement with the original classifier prediction. N07: 19/24 (79.17%); N17: 6/24 (25%). 10,000 bootstrap replicates resampled 12 source clusters (seed 21021), not 24 independent faces. The biometric confidence intervals cross zero; no demonstrated additional identity obfuscation from neutral-target prompting. Increasing NIQE is an unfavorable image-quality change, not direct perceptual evidence.
+### Data handling
 
-## Next release gate
+**Public GitHub:** code, protocol, source-independent aggregate statistics, limited aggregate QC counts, audit. **Private Google Drive:** original/generated face images, raw rows, source identifiers, personal labels/notes, per-image receipts, ONNX weights and executed Colab outputs. Do not upload the latter to this public repository. Public notebook source is not an executed-output export.
 
-The newly agreed final workflow requires a **fresh, versioned run** using independently verified source checksums, frozen FlowEdit/SD3 configs, evaluator preprocessing, and reproducible output receipts, with the supervisor's exact emotion-agnostic target prompt (`the same facial expression`) as a distinct control condition. The existing N17 **neutral** ablation is not that condition. Reassess the 120-original FER baseline, biometric coverage, quality, and 108-source tuning-held-out comparisons under a consistent evaluation definition. Do not overwrite previous runs or publish unexecuted numbers. The implementation/config freeze and subsequent run have **not yet been executed**. See [revised experimental protocol](docs/revised_experimental_protocol.md).
+### Earlier experiments
 
-## Repository contents
+Archived N07 (120 sources/600 images), N12 V3 biometrics, N16 NIQE, N17–N21 neutral-target pilot and N22 preliminary AI screenshot QC remain historical evidence and provenance **not** interchangeable with final NB23/NB24 data. See [experiment registry](docs/evidence.md) and [notebook index](notebooks/README.md).
 
-- [Python package](src/face_privacy) — paired analysis, provenance checks, frozen FER ensemble and biometric utilities.
-- [N21 Colab code](notebooks/21_final_exact_n07_ensemble_fer.ipynb) — archived final FER evaluation implementation. **Do not rerun by default.**
-- [Canonical notebook index](notebooks/README.md) — one coherent generation / evaluation / analysis workflow backed by already-executed runs.
-- [Aggregate N21 results](results/nb21_final_paired_aggregate.csv) — public summary only.
-- [Evidence registry and limitations](docs/evidence.md) — scope, provenance and unresolved QC.
-- [Frozen V3 biometric pipeline](docs/frozen_biometrics_v3.md) — YOLO crop removal, detector scale comparison, aligned embeddings and technical coverage audit.
-- [Private Drive data contract](docs/colab.md) — where already-executed private outputs live.
-- [Historical research notebooks](https://github.com/menychtak/thesis_notes) — exploratory development lineage.
-
-## Development
+## Developer checks
 
 ```bash
 python -m pip install -e '.[test]'
 pytest -q
 ```
 
-## Privacy and scientific limits
-
-Never commit original/generated faces, screenshots of participants, source identifiers, private row-level predictions, full manifests, embeddings, checkpoints or private receipts to this public repository. All raw evidence stays on private Google Drive. Cosine similarity is **not** calibrated re-identification risk. The source count is small, observations are exploratory, and no clinical efficacy or privacy guarantee has been established. The five visually uncertain pairs (8, 15, 16, 21, 22) remain flagged; independently reviewed, full-resolution face QC is still pending. An independently versioned final-generation/evaluation run is planned but not yet executed; historical figures remain labeled historical.
+A clean GitHub source tree is not equivalent to a fresh end-to-end Colab reproduction: access to licensed/private images, exact ONNX weights, and pinned model revisions is required. No medically deployable anonymization or privacy guarantee is claimed.
