@@ -1,6 +1,6 @@
-# Revised experimental protocol — pending fresh evidence freeze
+# Revised experimental protocol — final rerun requested, not yet executed
 
-This is a forward-looking research plan, **not an executed experiment or a result**. Existing executed N07/N12/N15/N16/N17/N19/N21 evidence must remain frozen and immutable.
+A fresh complete experimental reproduction has been requested. This remains a plan, **not an executed experiment or a result**. Existing executed N07/N12/N15/N16/N17/N19/N21 evidence must remain frozen and immutable.
 
 ## Preconditions
 1. Use only original 120 AffectNet sources with verified source checksums, labeled six-class mapping and the exact development/tuning membership. Keep source identities private.
@@ -9,7 +9,7 @@ This is a forward-looking research plan, **not an executed experiment or a resul
 4. Keep new experiments in newly timestamped run directories; no overwrites of historical evidence, no raw images or row-level participant data in public GitHub.
 
 ## Evaluation strategy
-- **Biometric coverage (professor point 1):** corrected N12 V3 / N15 already re-evaluated existing N07 outputs (600/600). Validate exact coverage by source, condition, model and matching pair; publish the corrected estimates, not the historical 424-failure pipeline. Do not repeat generation to repair detector coverage.
+- **Biometric coverage (professor point 1):** corrected N12 V3 / N15 already re-evaluated existing N07 outputs (600/600 attempted and reportedly finite). The new final run must independently confirm face detection, alignment and success coverage per condition rather than treating historical records as its outputs. Validate exact coverage by source, condition, model and matching pair; publish the corrected estimates, not the historical 424-failure pipeline. Do not repeat generation to repair detector coverage.
 - **Original FER baseline (point 2):** 120-image recorded baseline 0.475 accuracy, 0.467 six-class macro-F1 is available historically, but before thesis publication verify its exact evaluator (N07 two-ViT ensemble vs trpakov-only) and denominator directly against archived executed rows. Label each evaluator explicitly. No artificial comparison with an incompatible classifier.
 - **Prompt ablation (point 3):** this truly requires new **generation**. Use target prompt without a named emotion, specifically phrased `the same facial expression` while retaining the different-person identity instruction. Fix g=4.5 seed=42 and all frozen original parameters. Save a separate run/manifest. The existing N17 **neutral-target** pilot is not this ablation and cannot be used as substitute.
 - **Tuning-held-out analysis (point 4):** recompute N15-style paired comparisons after excluding exact 12 development source IDs from the 120. Keep the 108-source results separate from full-120 descriptives.
