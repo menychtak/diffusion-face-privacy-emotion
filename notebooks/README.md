@@ -28,6 +28,25 @@ This is an academic reproducibility repository. The **reporting unit** is the or
 | Final unified evaluation | N24 | [02 — evaluation](02_heldout_evaluation_N24.ipynb) | Executed 324/324, 108/108 source FER replay |
 | Human visual QC | Checklist (not an executable notebook) | [Public aggregate](../results/nb24_manual_qc_aggregate.csv) | 36 images reviewed once, exploratory sample |
 
+## Historical evaluator code mirrored here
+
+These notebooks were imported from the earlier [`thesis_notes/Notebooks/current`](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) archive. **Embedded cell outputs were intentionally removed**: the copies below are **source-only**, even where the original notebook had been run. They are provided for code traceability, not as newly executed evidence.
+
+| Research topic | Notebook |
+| --- | --- |
+| N11: biometrics alignment | [N11](history/11_v3_biometric_alignment_validation.ipynb) |
+| N12: corrected ArcFace / AuraFace | [N12](history/12_corrected_v3_biometric_privacy_reevaluation.ipynb) |
+| N13: QC-aware sensitivity | [N13](history/13_qc_aware_privacy_utility_sensitivity.ipynb) |
+| N14: original FER baseline | [N14](history/14_original_fer_baseline_from_notebook07.ipynb) |
+| N15: development-source exclusions | [N15](history/15_verified_tuning_exclusion_sensitivity.ipynb) |
+| N16: NIQE | [N16](history/16_no_reference_image_quality_niqe.ipynb) |
+| N17: neutral-prompt pilot | [N17](history/17_neutral_target_prompt_flowedit_pilot.ipynb) |
+| N17v2: resumable neutral-prompt generation | [N17v2](history/17v2_neutral_target_resume_safe.ipynb) |
+| N18: strict pilot pairs | [N18](history/18_n17v2_strict_paired_evaluation.ipynb) |
+| N21: FER evaluator validation | [N21](history/N21_fer_evaluator_validation.ipynb) |
+
+Earlier N01–N07 notebooks are several megabytes each, and some contain embedded face images; **do not copy those public historical files into this repository unfiltered**. Their precise source links are given in the map above.
+
 **N19, N20, N22:** their exact final canonical notebook source and executed notebook file **have not been verified in this repository**. Never create dummy notebooks, label a code-only copy as executed, or generate new outputs just to fill sequence numbers. The public summary/result exports are preserved but do not themselves prove the presence of an executed notebook artifact.
 
 ## What should be uploaded manually?
