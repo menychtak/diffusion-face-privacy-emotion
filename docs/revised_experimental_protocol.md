@@ -1,5 +1,8 @@
 # Revised experimental protocol — final rerun requested, not yet executed
 
+> **Historical planning artifact (superseded by executed NB23/NB24, 2026-10-14):** The proposed final rerun below **has since been executed**. Read the [Final Scientific Audit](final_scientific_audit_nb24.md) for actual verified results, limited manual QC, and unresolved interpretation limits. The old future-tense lines below are preserved solely as the pre-execution protocol, **not** current run status.
+
+
 A fresh complete experimental reproduction has been requested. This remains a plan, **not an executed experiment or a result**. Existing executed N07/N12/N15/N16/N17/N19/N21 evidence must remain frozen and immutable.
 
 ## Preconditions
