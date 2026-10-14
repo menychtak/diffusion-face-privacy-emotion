@@ -63,6 +63,10 @@ Running the full notebooks requires licensed/private study inputs, pre-existing 
 
 See the [reproduction/completeness ledger](docs/reproduction_status.md) for the verified run status of every notebook family and outstanding archive imports.
 
+## Original-image emotion-classifier baseline
+
+The [original FER baseline summary](results/original_fer_baseline_120_and_108.csv) reports Accuracy and six-class/seven-class Macro-F1 separately for the initial 120 sources and the final 108 held-out sources. The 108-source figures were computed once per original source from saved N24 predictions, not 324 synthetic outputs. They provide essential context for interpreting FER changes after editing. This is a **post hoc aggregate extraction**, not newly executed model inference.
+
 ## Public evidence companion (Google Drive)
 
 A curated [**N24 public-evidence release folder**](https://drive.google.com/drive/folders/1_2d0dJM4aUOxOEtR_bPsbM87gD_HptRF) contains **only** aggregated `N24_aggregate_by_condition.csv`, `N24_paired_contrasts.csv`, and the source-independent `N24_run_status.json`. These are redundant convenience copies: the same statistical evidence is publicly accessible in [`results/`](results/).
