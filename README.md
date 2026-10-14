@@ -1,6 +1,6 @@
 # Diffusion Face Privacy & Emotion Preservation
 
-Research implementation and verified **held-out experimental evidence** for an MSc thesis on face identity obfuscation using pretrained diffusion models, while preserving facial emotion.
+Research implementation and verified **experimental evidence** for my MSc thesis on face identity obfuscation using pretrained diffusion models, while preserving facial emotion and expression similarity.
 
 ## Current research evidence (2026-10-14)
 
