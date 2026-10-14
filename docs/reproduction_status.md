@@ -37,7 +37,7 @@ In the thesis, cite the experimental method in Chapter 6, the results CSVs in Ch
 - [N21 output folder](https://drive.google.com/drive/folders/1XUibLwJ4nVIGHypNeHa5j_og60E1tgYv).
 - [N23 final generated images/receipts](https://drive.google.com/drive/folders/1KxDi4nMPp1NHFZjXIW6ZYC5Ra_7QeETf).
 - [N24 final metrics/results](https://drive.google.com/drive/folders/1QWD9rYEPQvXKTq-VZpSMiX2_Ofg3TTgn).
-- [May historical N01–N03 original notebook directory](https://drive.google.com/drive/folders/1wFo30IZiNIjkQil_IFpFUmkB8) (older filenames and snapshots; inspect before associating one-to-one with canonical N-series).
+- [May historical N01–N03 original notebook directory](https://drive.google.com/drive/folders/1wFo30IZiNIjkQil_IFpFUmkGDuUqot-Y) (older filenames and snapshots; inspect before associating one-to-one with canonical N-series).
 - [June historical N01–N06 notebook directory](https://drive.google.com/drive/folders/1TTc6n5S_-TGrRokTNYzmZuERE9_4FquF) (some `.ipynb` files are multi-megabyte with embedded outputs; **contains other sensitive files** and must not be shared or mirrored wholesale).
 
 Drive search did not locate exported `.ipynb` for N19–N24. A run folder proves there are output artifacts, but **not** that the notebook file itself has a saved executed state. The original Colab notebook is the appropriate place to export the executed `.ipynb` if one is needed by examiners.
