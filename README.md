@@ -37,6 +37,7 @@ The newly agreed final workflow requires a **fresh, versioned run** using indepe
 - [Canonical notebook index](notebooks/README.md) — one coherent generation / evaluation / analysis workflow backed by already-executed runs.
 - [Aggregate N21 results](results/nb21_final_paired_aggregate.csv) — public summary only.
 - [Evidence registry and limitations](docs/evidence.md) — scope, provenance and unresolved QC.
+- [Frozen V3 biometric pipeline](docs/frozen_biometrics_v3.md) — YOLO crop removal, detector scale comparison, aligned embeddings and technical coverage audit.
 - [Private Drive data contract](docs/colab.md) — where already-executed private outputs live.
 - [Historical research notebooks](https://github.com/menychtak/thesis_notes) — exploratory development lineage.
 
