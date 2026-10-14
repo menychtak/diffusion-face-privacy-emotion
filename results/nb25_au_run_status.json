@@ -1,0 +1,45 @@
+{
+  "analysis": "SUPPLEMENTARY_POSTHOC_AU",
+  "n_original_sources": 108,
+  "n_generated_images": 324,
+  "total_images_expected": 432,
+  "extracted_images": 432,
+  "valid_images": 431,
+  "conditions": [
+    "n07_g4p5",
+    "n07_g5p5",
+    "same_expression_g4p5"
+  ],
+  "model": "Py-Feat Detectorv2",
+  "py_feat_version": "2.1.5",
+  "AU_columns": [
+    "AU01",
+    "AU02",
+    "AU04",
+    "AU05",
+    "AU06",
+    "AU07",
+    "AU09",
+    "AU10",
+    "AU11",
+    "AU12",
+    "AU14",
+    "AU15",
+    "AU17",
+    "AU20",
+    "AU23",
+    "AU24",
+    "AU25",
+    "AU26",
+    "AU28",
+    "AU43"
+  ],
+  "seed_bootstrap": 20261015,
+  "bootstrap_n": 10000,
+  "limitations": [
+    "AU predictions are not human FACS annotations",
+    "No clinical validation",
+    "If missing detections, comparisons conditional on valid pairs",
+    "Exploratory post hoc evaluation; no model generation or training"
+  ]
+}
