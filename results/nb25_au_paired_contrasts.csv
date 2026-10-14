@@ -1,0 +1,4 @@
+contrast,metric,n_paired_sources,mean_delta,ci95_low,ci95_high,ci_status
+g5p5_minus_g4p5,au_mae,107,0.03592322730266002,0.029405744156036032,0.04252464196359788,conditional_on_jointly_valid_sources
+same_expression_minus_g4p5,au_mae,107,0.04035792652657279,0.025389567632610525,0.05598093260568527,conditional_on_jointly_valid_sources
+same_expression_minus_g5p5,au_mae,107,0.004434699223912782,-0.013055228446717795,0.02173236196133279,conditional_on_jointly_valid_sources
