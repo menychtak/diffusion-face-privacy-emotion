@@ -13,4 +13,4 @@
 
 The final public aggregate is [`results/nb21_final_paired_aggregate.csv`](../results/nb21_final_paired_aggregate.csv). Do **not** commit private manifests, image files, execution screenshots, participant IDs or per-image FER/biometric rows.
 
-The archived [Notebook 21](../notebooks/21_final_exact_n07_ensemble_fer.ipynb) performed a gated replay of both N07 FER classifiers and 24 N17 predictions. The earlier N20 notebook is retained as historical provisional work, **not** as a reproducible final evaluator. AI-assisted visual observations do not close independent full-resolution QC. No additional model inference or image generation is necessary for thesis write-up.
+The archived [Notebook 21](../notebooks/history/N21_fer_evaluator_validation.ipynb) performed a gated replay of both N07 FER classifiers and 24 N17 predictions. The earlier N20 notebook is retained as historical provisional work, **not** as a reproducible final evaluator. AI-assisted visual observations do not close independent full-resolution QC. No additional model inference or image generation is necessary for thesis write-up.
