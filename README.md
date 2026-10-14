@@ -78,3 +78,11 @@ Original faces, generated images, source-level predictions/paths, full evaluatio
 The legacy experiment of 120 images / 600 outputs belongs to **N07**, not the final N23/N24 held-out analysis. This distinction also applies to the neutral-target pilot (N17–N18), which is **not** the final same-expression prompt.
 
 **Scope of claims:** evidence of a biometric similarity/FER trade-off using fixed evaluators; no face-identification gallery attacks, calibrated privacy thresholds, multi-seed final sensitivity study, or clinical validation.
+
+## Restricted Visual Comparisons — Access by Request
+
+[View the 108-source comparison archive](https://drive.google.com/drive/folders/1w4eKRqp5xhtAlVU94y78mnOY7Ui4_Euk)
+
+The private Google Drive archive contains 108 triplets (324 images), each consisting of the original face and the generated outputs using guidance 4.5 and 5.5.
+
+Access is restricted. Thesis supervisors and examiners may request Viewer access from the author. Original facial images are not publicly accessible.
