@@ -1,14 +1,35 @@
-# Notebook index — executed final workflow
+# Thesis-to-code map
 
-| Stage | Notebook | Verified execution | Storage |
-| --- | --- | --- | --- |
-| 01 — Generation | [23 — confirmed held-out regeneration](23_confirmed_heldout_regeneration.ipynb) | **324/324** verified images; 108 held-out sources × three conditions × seed 42 | Image hashes / receipts in private Drive |
-| 02 — Evaluation | [24 — unified held-out evaluation](24_unified_heldout_evaluation.ipynb) | **324/324** ArcFace/AuraFace pairs, **324/324** NIQE, **108/108** FER source replay; evaluation status `EVALUATION_COMPLETE_QC_PENDING` | Per-image records remain in private Drive |
-| 03 — Analysis | [NB24 aggregate results](../results/nb24_heldout_aggregate_by_condition.csv) and [paired contrasts](../results/nb24_heldout_paired_contrasts.csv) | 108 paired sources, 10,000 bootstrap draws | Public aggregates only |
-| 04 — Human QC | [Limited human QC counts](../results/nb24_manual_qc_aggregate.csv) | 12 sources / 36 synthetic images; one reviewer; completed, **not full-dataset QC** | Private detailed checklist |
+This is an academic reproducibility repository. The **reporting unit** is the original source face, not a synthetic image, and the **final held-out experiment** is N23 generation followed by N24 evaluation.
 
-### Execution and provenance boundaries
+## Reading order
 
-NB23 and NB24 are the maintained code for this final workflow. Their completed run evidence is held separately in Google Drive. **Do not claim public notebook cell outputs themselves prove an executed run**, and do not rerun expensive generation just to tidy the repository. Scientific qualification and open audit actions: [Final Scientific Audit](../docs/final_scientific_audit_nb24.md).
+1. [Experiment protocol and dataset boundaries](../docs/final_scientific_audit_nb24.md): development and final sources, conditions, metric definitions, limitations.
+2. [Generate — N23](01_heldout_generation_N23.ipynb): **already executed** in private Google Drive; this GitHub copy contains the notebook source, not its executed cell outputs.
+3. [Evaluate — N24](02_heldout_evaluation_N24.ipynb): **already executed**; 324/324 biometric/NIQE pairs and 108 source-FER replays.
+4. [Results](../results/README.md): public aggregate CSVs and paired confidence intervals.
+5. [Review limits](../docs/final_scientific_audit_nb24.md): no calibrated identification attack, no clinical evaluation, one final generation seed.
 
-Historical N07–N22 experiments remain available via [thesis_notes](https://github.com/menychtak/thesis_notes) and should not be silently relabeled as NB24 runs. In particular, N17 used a *neutral* target, not the NB23 *same-expression* target. Earlier N20 single-ViT emotion agreement is not equivalent to N07/N21/NB24 two-ViT human-label accuracy.
+**Do not rerun 01/02 just to add execution badges.** They have completed private runs. Upload an authentic executed notebook copy only if its original outputs have been checked for identifiable faces, subject IDs, raw paths, secrets, and private row-level data; otherwise keep the existing source notebook and the public aggregated execution evidence.
+
+## Notebook provenance
+
+| Thesis topic | Experiment or notebook | Where its source currently lives | Execution claim |
+|---|---|---|---|
+| Ch. 5: DDIM, DDPM inversion | N01–N02 | [Historical source archive](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Development history; not final result |
+| Ch. 5: FER-2013 comparison | N03 | [Historical source](https://github.com/menychtak/thesis_notes/blob/main/Notebooks/current/03_fer2013_methods_a_to_g_fer_dino.ipynb) | Development experiment; figures/numbers are historical |
+| Ch. 5: FlowEdit prompt/guidance sweeps | N04–N06c | [Historical sources](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Development/tuning; different denominators |
+| Ch. 4–5: 120 sources / 600 synthetic images | N07 | [Original N07 source](https://github.com/menychtak/thesis_notes/blob/main/Notebooks/current/07_affectnet_final_multi_image_evaluation.ipynb) | Previously executed; **not** final held-out evidence |
+| Ch. 5–6: detector alignment / corrected biometrics | N10–N12 | [Original notebooks](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Previous evaluator development; N12 V3 algorithm used in N24 |
+| Ch. 5–6: FER, exclusion, NIQE | N13–N16 | [Original notebooks](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Prior validation/quality checks |
+| Ch. 5: neutral prompt pilot | N17–N18 | [Original notebooks](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Historical only; **different target prompt** from N23 |
+| FER evaluator parity | N21 | [Historical notebook retained here](history/N21_fer_evaluator_validation.ipynb) | Evaluator-provenance notebook, not main pipeline |
+| Final held-out generation | N23 | [01 — generation](01_heldout_generation_N23.ipynb) | Executed 324/324; original notebook execution remains private |
+| Final unified evaluation | N24 | [02 — evaluation](02_heldout_evaluation_N24.ipynb) | Executed 324/324, 108/108 source FER replay |
+| Human visual QC | Checklist (not an executable notebook) | [Public aggregate](../results/nb24_manual_qc_aggregate.csv) | 36 images reviewed once, exploratory sample |
+
+**N19, N20, N22:** their exact final canonical notebook source and executed notebook file **have not been verified in this repository**. Never create dummy notebooks, label a code-only copy as executed, or generate new outputs just to fill sequence numbers. The public summary/result exports are preserved but do not themselves prove the presence of an executed notebook artifact.
+
+## What should be uploaded manually?
+
+Only a **verified source or executed** notebook that materially adds traceability and has passed a privacy review. The original code-only N01–N18 files are already publicly accessible at the linked GitHub history, and can be imported later if a self-contained repo is required. For executed notebook copies, use the original Drive/Colab export rather than relying on reconstructed JSON. See [manual import checklist](../docs/notebook_import_checklist.md).
