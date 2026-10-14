@@ -8,8 +8,8 @@ Research implementation and verified **experimental evidence** for my MSc thesis
 
 | Stage | Protocol | Verified result |
 | --- | --- | --- |
-| Generate | [NB23 FlowEdit / SD3-Medium](notebooks/23_confirmed_heldout_regeneration.ipynb) | **324/324 verified** synthetic 512×512 images: 108 held-out AffectNet sources × 3 conditions × seed 42 |
-| Evaluate | [NB24 unified frozen evaluators](notebooks/24_unified_heldout_evaluation.ipynb) | **324/324** paired valid ArcFace and AuraFace scores; **324/324** NIQE; **108/108** original FER predictions reproduced |
+| Generate | [NB23 FlowEdit / SD3-Medium](notebooks/01_heldout_generation_N23.ipynb) | **324/324 verified** synthetic 512×512 images: 108 held-out AffectNet sources × 3 conditions × seed 42 |
+| Evaluate | [NB24 unified frozen evaluators](notebooks/02_heldout_evaluation_N24.ipynb) | **324/324** paired valid ArcFace and AuraFace scores; **324/324** NIQE; **108/108** original FER predictions reproduced |
 | Analyze | [Conditions](results/nb24_heldout_aggregate_by_condition.csv); [paired contrasts](results/nb24_heldout_paired_contrasts.csv) | 108 paired independent source units; source-level bootstrap, 10,000 draws |
 | Human visual QC | [Limited QC summary](results/nb24_manual_qc_aggregate.csv) | **12 held-out source faces, 36 synthetic images** reviewed by one assessor; exploratory, non-random source-ID selection |
 | Scientific review | [Final Scientific Audit](docs/final_scientific_audit_nb24.md) | Scope, supported findings, unresolved validity limits and release checklist |
