@@ -1,5 +1,8 @@
 # Reproduction & completeness audit (2026-10-15)
 
+**New:** [Executed public NB24 report](../notebooks/03_executed_public_results_report.ipynb), with saved text-only outputs from an actual Python execution. It *reproduces the public summary calculation*, not the original GPU production/evaluation; the existing N23/N24 original private runs remain the execution basis for Chapter 7.
+
+
 This is a **status ledger**, not a claim that every historical notebook has been replayed from a fresh environment.
 
 | Artifact | Code in this repo? | Existing execution evidence | Need to run now? | Public status |
