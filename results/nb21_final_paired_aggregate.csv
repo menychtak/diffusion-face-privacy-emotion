@@ -1,0 +1,5 @@
+metric,n_pairs,n_sources,mean_delta,ci95_low,ci95_high,bootstrap_draws,bootstrap_seed,status
+delta_fer_preserved,24,12,-0.54167,-0.79167,-0.29167,10000,21021,executed_N07_two_ViT_ensemble
+delta_arcface,24,12,-0.00637,-0.10970,0.07983,10000,21021,executed_N19_scores_rebootstrapped
+delta_auraface,24,12,-0.05917,-0.15663,0.02895,10000,21021,executed_N19_scores_rebootstrapped
+delta_niqe,24,12,0.19239,0.00385,0.42891,10000,21021,executed_N18_N19_scores_rebootstrapped
