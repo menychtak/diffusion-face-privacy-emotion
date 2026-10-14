@@ -1,0 +1,5 @@
+metric,mean_delta,ci95_low,ci95_high,n_valid_pairs,n_sources,status
+NIQE_N17_minus_N07,0.1924,0.0065,0.4331,24,12,executed
+ArcFace_cosine_N17_minus_N07,-0.0064,-0.1107,0.0804,24,12,executed
+AuraFace_cosine_N17_minus_N07,-0.0592,-0.1554,0.0310,24,12,executed
+FER_preservation_N17_minus_N07,,,,0,12,pending_exact_N07_classifier
