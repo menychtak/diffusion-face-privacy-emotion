@@ -1,4 +1,4 @@
-"""Frozen N12 V3 detector/alignment/recognizer algorithm used by N19.
+"""SHA-pinned N12 V3 detector/alignment/recognizer algorithm used for evaluator checks.
 
 Weights must be provided by user from private Drive; never download or silently
 replace a missing checkpoint. CPU-only ONNX execution for deterministic replay.
@@ -25,8 +25,11 @@ def load_frozen_models(paths: dict[str, str | Path]):
         if file_sha256(paths[name]) != expected:
             raise ValueError(f"Frozen {name} weight sha256 mismatch")
     detector = get_model(str(paths["detector"]), providers=["CPUExecutionProvider"])
-    if type(detector).__name__ != "SCRFD":
-        raise TypeError("Detector must be frozen SCRFD")
+    # InsightFace may expose the SHA-pinned detector ONNX with a RetinaFace
+    # Python wrapper. Verify the exact file hash and detection interface,
+    # rather than incorrectly requiring one wrapper class name.
+    if not callable(getattr(detector, "detect", None)):
+        raise TypeError("The SHA-pinned detector must expose detect()")
     detector.prepare(ctx_id=-1, input_size=(640, 640), det_thresh=0.1)
     recognizers = {}
     for name in ("arcface", "auraface"):
