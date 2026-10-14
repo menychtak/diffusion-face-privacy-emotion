@@ -1,36 +1,68 @@
-# Diffusion Face Privacy & Emotion Preservation
+# Face Identity Obfuscation with Diffusion Models
+**MSc thesis · University of Piraeus · Python / Google Colab**
 
-Research implementation and verified **experimental evidence** for my MSc thesis on face identity obfuscation using pretrained diffusion models, while preserving facial emotion and expression similarity.
+Can a pretrained image editor alter the biometric identity of a face without discarding information needed for facial emotion recognition?
 
-## Current research evidence (2026-10-14)
+This repository accompanies the thesis with **code, an experiment map, result tables, and an explicit scientific audit**. It distinguishes development work from the final held-out experiment. It does **not** claim certified anonymization or clinical fitness.
 
-**Generation and automated evaluation complete; limited human visual QC complete. Thesis conclusions remain conditional on the [Final Scientific Audit](docs/final_scientific_audit_nb24.md).** This is not clinical validation or proof of irreversible anonymization.
+## Reproduce the scientific narrative
 
-| Stage | Protocol | Verified result |
+| Read | Material | Thesis |
 | --- | --- | --- |
-| Generate | [NB23 FlowEdit / SD3-Medium](notebooks/01_heldout_generation_N23.ipynb) | **324/324 verified** synthetic 512×512 images: 108 held-out AffectNet sources × 3 conditions × seed 42 |
-| Evaluate | [NB24 unified frozen evaluators](notebooks/02_heldout_evaluation_N24.ipynb) | **324/324** paired valid ArcFace and AuraFace scores; **324/324** NIQE; **108/108** original FER predictions reproduced |
-| Analyze | [Conditions](results/nb24_heldout_aggregate_by_condition.csv); [paired contrasts](results/nb24_heldout_paired_contrasts.csv) | 108 paired independent source units; source-level bootstrap, 10,000 draws |
-| Human visual QC | [Limited QC summary](results/nb24_manual_qc_aggregate.csv) | **12 held-out source faces, 36 synthetic images** reviewed by one assessor; exploratory, non-random source-ID selection |
-| Scientific review | [Final Scientific Audit](docs/final_scientific_audit_nb24.md) | Scope, supported findings, unresolved validity limits and release checklist |
+| 1 | [Notebook map and experiment history](notebooks/README.md) | Chapters 4–6 |
+| 2 | [01 — held-out generation (N23)](notebooks/01_heldout_generation_N23.ipynb) | Chapter 6 |
+| 3 | [02 — held-out evaluation (N24)](notebooks/02_heldout_evaluation_N24.ipynb) | Chapters 6–7 |
+| 4 | [Final condition-level results](results/nb24_heldout_aggregate_by_condition.csv) and [paired contrasts](results/nb24_heldout_paired_contrasts.csv) | Chapter 7 |
+| 5 | [Manual visual QC aggregates](results/nb24_manual_qc_aggregate.csv) | Chapter 7 |
+| 6 | [Scientific audit / interpretation limits](docs/final_scientific_audit_nb24.md) | Chapters 8–10 |
+| 7 | [Historical notebooks (original research archive)](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Chapter 5 |
 
-**Key result:** Moving from guidance 4.5 to 5.5 reduces mean source–synthetic ArcFace cosine by **0.1992** (paired 95% CI [−0.2231, −0.1775]) and AuraFace cosine by **0.1776** (CI [−0.1983, −0.1586]). Human-label FER accuracy changes from **57.41% to 62.04%**, but the +4.63 percentage-point contrast has CI **[−2.78, +12.04] pp**. This supports *lower embedding similarity*, **not** proof of a general utility improvement or a calibrated re-identification rate.
+### Final experiment
 
-The emotion-agnostic **same-expression** condition achieves **16.67%** human-label FER accuracy. Review [audit limitations](docs/final_scientific_audit_nb24.md) before attributing this result solely to failed expression preservation; the qualitative task and automated label task are different.
+108 held-out AffectNet+ face images × 3 processing conditions × seed 42 = **324 generated images**, confirmed in N23 and assessed in N24. The 12 development sources were excluded from this final comparison. For more details and exact limitations read the [scientific audit](docs/final_scientific_audit_nb24.md).
 
-### Data handling
+| Condition | ArcFace cosine ↓ | AuraFace cosine ↓ | Human-label FER accuracy ↑ | NIQE ↓ |
+| --- | ---: | ---: | ---: | ---: |
+| Emotion prompt, guidance 4.5 | 0.6557 | 0.6539 | 57.41% | 7.7020 |
+| Emotion prompt, guidance 5.5 | 0.4565 | 0.4763 | 62.04% | 7.6126 |
+| Same-expression prompt, guidance 4.5 | 0.5955 | 0.5903 | 16.67% | 7.8309 |
 
-**Public GitHub:** code, protocol, source-independent aggregate statistics, limited aggregate QC counts, audit. **Private Google Drive:** original/generated face images, raw rows, source identifiers, personal labels/notes, per-image receipts, ONNX weights and executed Colab outputs. Do not upload the latter to this public repository. Public notebook source is not an executed-output export.
+The **paired human-label FER change** (g5.5 minus g4.5) was **+4.63 percentage points**, with **95% CI [−2.78, +12.04] pp**. This does **not** establish a statistically reliable emotion-utility gain. Lower ArcFace/AuraFace cosine represents greater embedding difference, **not a measured re-identification risk**.
 
-### Earlier experiments
+Human visual review covered 36 generated images from 12 sources, with one reviewer. It was a limited, deliberately selected subset and is not a whole-population estimate.
 
-Archived N07 (120 sources/600 images), N12 V3 biometrics, N16 NIQE, N17–N21 neutral-target pilot and N22 preliminary AI screenshot QC remain historical evidence and provenance **not** interchangeable with final NB23/NB24 data. See [experiment registry](docs/evidence.md) and [notebook index](notebooks/README.md).
+## Repository structure
 
-## Developer checks
+```text
+notebooks/
+  01_heldout_generation_N23.ipynb
+  02_heldout_evaluation_N24.ipynb
+  history/N21_fer_evaluator_validation.ipynb
+  README.md                           # map from thesis to every experiment
+results/
+  nb24_*                              # final PUBLIC aggregate statistics
+  nb19_*, nb21_*, verified_n12_*       # historical public evidence, not final
+  README.md
+src/face_privacy/                     # reusable inference/evaluation modules
+scripts/                              # historical provenance-check utility
+tests/                                # small, data-free reproducibility tests
+docs/                                 # scientific audit, protocol, import guidance
+```
 
+The `src/`, `scripts/`, and `tests/` directories are **supporting reproducibility code**, not extra experiments or evidence of better model performance. Keeping focused unit tests is standard responsible research engineering: they catch mistakes in paired comparisons and inference semantics without exposing any study images.
+
+For lightweight verification (no private data, no GPU):
 ```bash
 python -m pip install -e '.[test]'
 pytest -q
 ```
 
-A clean GitHub source tree is not equivalent to a fresh end-to-end Colab reproduction: access to licensed/private images, exact ONNX weights, and pinned model revisions is required. No medically deployable anonymization or privacy guarantee is claimed.
+Running the full notebooks requires licensed/private study inputs, pre-existing model checkpoints and a compatible Colab environment. **N23 and N24 have already been executed privately.** The notebooks in this repository are code copies; their outputs are intentionally not embedded.
+
+## Privacy and execution integrity
+
+Original faces, generated images, source-level predictions/paths, full evaluation rows, ONNX weights and private output receipts are **not for a public repository**. Uploading an executed notebook without checking cell outputs can expose them. See the [safe notebook import checklist](docs/notebook_import_checklist.md).
+
+The legacy experiment of 120 images / 600 outputs belongs to **N07**, not the final N23/N24 held-out analysis. This distinction also applies to the neutral-target pilot (N17–N18), which is **not** the final same-expression prompt.
+
+**Scope of claims:** evidence of a biometric similarity/FER trade-off using fixed evaluators; no face-identification gallery attacks, calibrated privacy thresholds, multi-seed final sensitivity study, or clinical validation.
