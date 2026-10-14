@@ -90,3 +90,7 @@ The legacy experiment of 120 images / 600 outputs belongs to **N07**, not the fi
 The private Google Drive archive contains 108 triplets (324 images), each consisting of the original face and the generated outputs using guidance 4.5 and 5.5.
 
 Access is restricted. Thesis supervisors and examiners may request Viewer access from the author. Original facial images are not publicly accessible.
+
+## Supplementary expression-preservation analysis (N25)
+
+The [executed N25 AU evaluation notebook](notebooks/03_heldout_au_evaluation_N25.ipynb) retains execution counts and text-only result outputs; widget and image outputs have been excluded from the GitHub copy. [Condition-level AU metrics](results/nb25_au_aggregate.csv), [paired bootstrap contrasts](results/nb25_au_paired_contrasts.csv), and [run status](results/nb25_au_run_status.json) are public aggregate artifacts. N25 evaluates 108 originals and 324 generated images with Py-Feat Detectorv2; 431/432 images yielded valid AU estimates and 107/108 source pairs per condition were valid. This is **post-hoc model-estimated AU evidence, not manually coded FACS or clinical validation**. Row-level outputs remain in private Google Drive.
