@@ -1,5 +1,8 @@
 # Frozen experiment registry and evidence boundaries
 
+> **2026-10-14 current evidence note:** The original registry below describes the historical N07–N22 lineage. The separately executed final held-out NB23 generation (324/324), NB24 unified evaluation (324/324 automatic measurements, 108/108 FER replay), and completed limited human visual QC (12 sources / 36 images) are now documented in [Final Scientific Audit](final_scientific_audit_nb24.md). [Final NB24 aggregates](../results/nb24_heldout_aggregate_by_condition.csv), [paired contrasts](../results/nb24_heldout_paired_contrasts.csv), and [manual QC counts](../results/nb24_manual_qc_aggregate.csv) take precedence for **final** comparisons. Historical references to pending QC apply only to that historical phase; the final QC is limited, not full-sample.
+
+
 | Experiment | Private run (under `thesis_all/outputs/runs/`) | Verified execution |
 | --- | --- | --- |
 | N07 | `20260818T210720Z_notebook07_affectnet_larger_6aeb3643_f1142664` | 120 sources / 600 synthetic images |
