@@ -14,7 +14,7 @@ The scientific workflow has **three conceptual stages**, not one Colab notebook 
 | --- | --- | --- |
 | Generation | [Historical executed N07](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) and private N07 Drive run | Generation cells and exact immutable config, output receipts; no cached output re-run |
 | Biometric evaluator | Archived N12 V3, N15 | Frozen detector, pre-processing, align/cosine, exact weight SHA-256, same 600 saved output images |
-| Expression/FER | Archived N07 evaluation plus [exact ensemble N21](../notebooks/21_final_exact_n07_ensemble_fer.ipynb) | Separate the 120-original baseline, 600-image categorical statistics and N21 24-image ablation |
+| Expression/FER | Archived N07 evaluation plus [exact ensemble N21](../notebooks/history/N21_fer_evaluator_validation.ipynb) | Separate the 120-original baseline, 600-image categorical statistics and N21 24-image ablation |
 | Quality | Archived N16 | Executed NIQE results, coverage and meaning |
 | Statistical results | N15, N18–N21 outputs | Public only aggregate metrics and source-cluster interval provenance |
 
