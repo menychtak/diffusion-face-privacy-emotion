@@ -1,17 +1,14 @@
-# Canonical notebooks — thesis presentation
+# Notebook index — executed final workflow
 
-The original **generation** is the archived executed 600-image N07 run. **A fresh final run has now been requested** using independently verified configurations and a distinct emotion-agnostic prompt control; it has not yet been executed. To present the research as a coherent implementation, use this three-stage index instead of an ordered list of debugging notebooks.
+| Stage | Notebook | Verified execution | Storage |
+| --- | --- | --- | --- |
+| 01 — Generation | [23 — confirmed held-out regeneration](23_confirmed_heldout_regeneration.ipynb) | **324/324** verified images; 108 held-out sources × three conditions × seed 42 | Image hashes / receipts in private Drive |
+| 02 — Evaluation | [24 — unified held-out evaluation](24_unified_heldout_evaluation.ipynb) | **324/324** ArcFace/AuraFace pairs, **324/324** NIQE, **108/108** FER source replay; evaluation status `EVALUATION_COMPLETE_QC_PENDING` | Per-image records remain in private Drive |
+| 03 — Analysis | [NB24 aggregate results](../results/nb24_heldout_aggregate_by_condition.csv) and [paired contrasts](../results/nb24_heldout_paired_contrasts.csv) | 108 paired sources, 10,000 bootstrap draws | Public aggregates only |
+| 04 — Human QC | [Limited human QC counts](../results/nb24_manual_qc_aggregate.csv) | 12 sources / 36 synthetic images; one reviewer; completed, **not full-dataset QC** | Private detailed checklist |
 
-| Stage | Canonical source | Execution |
-| --- | --- | --- |
-| **01. Generate** | N07: `thesis_notes/Notebooks/current/07_affectnet_final_multi_image_evaluation.ipynb`; archived configuration and immutable receipts on private Drive | **Archived execution**; new final reproduction pending |
-| **02. Evaluate** | N12 V3 ArcFace/AuraFace, N16 NIQE, N07 FER; the [N21 exact two-ViT pilot evaluator](21_final_exact_n07_ensemble_fer.ipynb) is a separate 24-image ablation | **Archived evaluation**; final run/evaluator parity pending |
-| **03. Analyze** | N15 dev-held-out source-cluster paired analysis, N18–N21 exploratory neutral pilot | **Archived analysis**; recalculate final tables only from the new verified evidence |
+### Execution and provenance boundaries
 
-## Presentation versus provenance
+NB23 and NB24 are the maintained code for this final workflow. Their completed run evidence is held separately in Google Drive. **Do not claim public notebook cell outputs themselves prove an executed run**, and do not rerun expensive generation just to tidy the repository. Scientific qualification and open audit actions: [Final Scientific Audit](../docs/final_scientific_audit_nb24.md).
 
-These are **conceptual chapters**, not a fabricated single historical execution. The full original notebooks in [`thesis_notes`](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) must stay intact for provenance. They are deliberately not copied wholesale into the public final repository: outputs can include screenshots, face images, old evaluator code and large private records.
-
-A polished standalone generation notebook could be produced by extracting only generation/config/receipt-validation code from the exact N07 source, **after** a code-level side-by-side parity review. Until parity is established, do not present a cleaned or rewritten generation notebook as a bitwise equivalent executed reproduction. The future final run must use new output paths and immutable per-image receipts. Similarly, avoid editing old execution notebooks to make their results appear obtained with a later evaluator.
-
-See the [consolidated methodological index](../docs/consolidated_workflow_and_supervisor_audit.md), [original PDF fidelity audit](../docs/pdf_fidelity_audit.md), and [verified 600-image results](../results/verified_n12_v3_n16_conditions.csv).
+Historical N07–N22 experiments remain available via [thesis_notes](https://github.com/menychtak/thesis_notes) and should not be silently relabeled as NB24 runs. In particular, N17 used a *neutral* target, not the NB23 *same-expression* target. Earlier N20 single-ViT emotion agreement is not equivalent to N07/N21/NB24 two-ViT human-label accuracy.
