@@ -30,6 +30,7 @@ Emotion preservation denotes agreement of **generated two-ViT ensemble predictio
 
 - [Python package](src/face_privacy) — paired analysis, provenance checks, frozen FER ensemble and biometric utilities.
 - [N21 Colab code](notebooks/21_final_exact_n07_ensemble_fer.ipynb) — archived final FER evaluation implementation. **Do not rerun by default.**
+- [Canonical notebook index](notebooks/README.md) — one coherent generation / evaluation / analysis workflow backed by already-executed runs.
 - [Aggregate N21 results](results/nb21_final_paired_aggregate.csv) — public summary only.
 - [Evidence registry and limitations](docs/evidence.md) — scope, provenance and unresolved QC.
 - [Private Drive data contract](docs/colab.md) — where already-executed private outputs live.
