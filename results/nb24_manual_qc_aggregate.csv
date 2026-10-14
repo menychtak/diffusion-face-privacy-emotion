@@ -1,0 +1,4 @@
+condition,n_source_faces,n_synthetic_images,face_valid_Y,face_valid_N,expression_similar_Y,expression_similar_N,artifact_Y,artifact_N,review_status
+n07_g4p5,12,12,8,4,10,2,5,7,COMPLETE_LIMITED_SAMPLE
+n07_g5p5,12,12,8,4,9,3,9,3,COMPLETE_LIMITED_SAMPLE
+same_expression_g4p5,12,12,9,3,8,4,3,9,COMPLETE_LIMITED_SAMPLE
