@@ -1,0 +1,3 @@
+population,n_sources,accuracy,correct,macro_f1_six_emotions,macro_f1_seven_including_disgust,provenance
+N14_initial_120,120,0.475,57,0.46700821188151903,0.400292753041302,N14_original_fer_baseline_json
+N24_heldout_108,108,0.4444444444444444,48,0.42741442333179486,0.3663552199986813,N24_private_all_324_evaluation_rows_deduplicated_by_source_id
