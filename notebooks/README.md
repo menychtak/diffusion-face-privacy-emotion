@@ -34,15 +34,15 @@ These notebooks were imported from the earlier [`thesis_notes/Notebooks/current`
 
 | Research topic | Notebook |
 | --- | --- |
-| N11: biometrics alignment | [N11](history/11_v3_biometric_alignment_validation.ipynb) |
-| N12: corrected ArcFace / AuraFace | [N12](history/12_corrected_v3_biometric_privacy_reevaluation.ipynb) |
-| N13: QC-aware sensitivity | [N13](history/13_qc_aware_privacy_utility_sensitivity.ipynb) |
-| N14: original FER baseline | [N14](history/14_original_fer_baseline_from_notebook07.ipynb) |
-| N15: development-source exclusions | [N15](history/15_verified_tuning_exclusion_sensitivity.ipynb) |
-| N16: NIQE | [N16](history/16_no_reference_image_quality_niqe.ipynb) |
-| N17: neutral-prompt pilot | [N17](history/17_neutral_target_prompt_flowedit_pilot.ipynb) |
-| N17v2: resumable neutral-prompt generation | [N17v2](history/17v2_neutral_target_resume_safe.ipynb) |
-| N18: strict pilot pairs | [N18](history/18_n17v2_strict_paired_evaluation.ipynb) |
+| N11: biometrics alignment | [N11](history/N11_v3_biometric_alignment_validation.ipynb) |
+| N12: corrected ArcFace / AuraFace | [N12](history/N12_corrected_v3_biometric_privacy_reevaluation.ipynb) |
+| N13: QC-aware sensitivity | [N13](history/N13_qc_aware_privacy_utility_sensitivity.ipynb) |
+| N14: original FER baseline | [N14](history/N14_original_fer_baseline_from_notebook07.ipynb) |
+| N15: development-source exclusions | [N15](history/N15_verified_tuning_exclusion_sensitivity.ipynb) |
+| N16: NIQE | [N16](history/N16_no_reference_image_quality_niqe.ipynb) |
+| N17: neutral-prompt pilot | [N17](history/N17_neutral_target_prompt_flowedit_pilot.ipynb) |
+| N17v2: resumable neutral-prompt generation | [N17v2](history/N17v2_neutral_target_resume_safe.ipynb) |
+| N18: strict pilot pairs | [N18](history/N18_n17v2_strict_paired_evaluation.ipynb) |
 | N21: FER evaluator validation | [N21](history/N21_fer_evaluator_validation.ipynb) |
 
 Earlier N01–N07 notebooks are several megabytes each, and some contain embedded face images; **do not copy those public historical files into this repository unfiltered**. Their precise source links are given in the map above.
@@ -53,11 +53,11 @@ The original private Colab files were located and examined. Public copies contai
 
 | ID | Public source-only copy | Original Colab execution |
 | --- | --- | --- |
-| N19 (patched, completed version) | [N19 corrected](history/19_n17v2_frozen_v3_biometrics_v2_fixed.ipynb) | [Original executed N19](https://colab.research.google.com/drive/1eZ4Gs2pvxGhZGR16YZdo9TpQm0J0_iSO) |
+| N19 (patched, completed version) | [N19 corrected](history/N19_neutral_pilot_biometric_evaluation.ipynb) | [Original executed N19](https://colab.research.google.com/drive/1eZ4Gs2pvxGhZGR16YZdo9TpQm0J0_iSO) |
 | N19 initial attempt | Not mirrored; prior incomplete/failed setup | [Initial notebook](https://colab.research.google.com/drive/1qAcSZRxxrcYdNhP_XcwYhKGIt1tRrz9s) |
-| N20 exact N07 FER replay | [N20](history/20_exact_n07_fer_replay.ipynb) | [Original executed N20](https://colab.research.google.com/drive/1aLijvkD01S49PqPe0QkVykSDtG8W7QTc) |
-| N22 historical face alignment review | [N22 source-only](history/22_private_manual_face_alignment_qc.ipynb) | [Original executed N22](https://colab.research.google.com/drive/1SE_i4IK8KZpq7sFR7v6MZRMUQi50PaXL) |
-| N22b provisional screenshot QC | [N22b source-only](history/22b_record_provisional_qc.ipynb) | [Original executed N22b](https://colab.research.google.com/drive/1hCe1m19eJ0qTjBDEdZTO3UvzKx4ToDw8) |
+| N20 exact N07 FER replay | [N20](history/N20_fer_evaluator_reproduction.ipynb) | [Original executed N20](https://colab.research.google.com/drive/1aLijvkD01S49PqPe0QkVykSDtG8W7QTc) |
+| N22 historical face alignment review | [N22 source-only](history/N22_historical_face_alignment_review.ipynb) | [Original executed N22](https://colab.research.google.com/drive/1SE_i4IK8KZpq7sFR7v6MZRMUQi50PaXL) |
+| N22b provisional screenshot QC | [N22b source-only](history/N22b_provisional_visual_qc.ipynb) | [Original executed N22b](https://colab.research.google.com/drive/1hCe1m19eJ0qTjBDEdZTO3UvzKx4ToDw8) |
 
 **Important:** N22 is a **historical** visual check of N07/N17 comparison pairs. N22b is explicitly a **provisional AI-assisted** record and must not be represented as the one-reviewer, 36-image **final NB24 manual QC**. N20 has saved output cells but includes explicit replay/provenance gates; it does not imply all earlier model-equivalence questions were conclusively resolved.
 
