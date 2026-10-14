@@ -59,6 +59,8 @@ pytest -q
 
 Running the full notebooks requires licensed/private study inputs, pre-existing model checkpoints and a compatible Colab environment. **N23 and N24 have already been executed privately.** The notebooks in this repository are code copies; their outputs are intentionally not embedded.
 
+See the [reproduction/completeness ledger](docs/reproduction_status.md) for the verified run status of every notebook family and outstanding archive imports.
+
 ## Privacy and execution integrity
 
 Original faces, generated images, source-level predictions/paths, full evaluation rows, ONNX weights and private output receipts are **not for a public repository**. Uploading an executed notebook without checking cell outputs can expose them. See the [safe notebook import checklist](docs/notebook_import_checklist.md).
