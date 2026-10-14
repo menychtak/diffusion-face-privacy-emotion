@@ -1,5 +1,8 @@
 # Thesis-to-code map
 
+**Executed and viewable on GitHub:** [03 — public NB24 results report](03_executed_public_results_report.ipynb) contains genuine Python execution counts and rendered aggregate outputs (no faces). This summarizes independently published result statistics; it is **not** the GPU run notebook. N23/N24 original algorithm notebooks remain source-only for privacy, with actual run evidence in private Drive and public aggregate tables.
+
+
 This is an academic reproducibility repository. The **reporting unit** is the original source face, not a synthetic image, and the **final held-out experiment** is N23 generation followed by N24 evaluation.
 
 ## Reading order
