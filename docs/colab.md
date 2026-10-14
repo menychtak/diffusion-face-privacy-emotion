@@ -1,22 +1,16 @@
-# Colab / Drive execution contract
+# Read-only private evidence contract
 
-Do **not** rerun the 600 N07 images or the 24 N17 diffusion images by
-default. Read existing paths in `/content/drive/MyDrive/thesis_all/outputs/runs`.
+**No new Colab experiment is required for repository cleanup.** Executed notebooks and row-level research outputs remain in private Google Drive under:
 
-In Colab:
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-!pip -q install 'git+https://github.com/menychtak/diffusion-face-privacy-emotion.git'
-from pathlib import Path
-import pandas as pd
-from face_privacy.provenance import verify_generation_receipts
-root=Path('/content/drive/MyDrive/thesis_all/outputs/runs')
-n17=root/'nb17v2_neutral_expression_12sources_2seeds_sd3pinned'
-verify_generation_receipts(pd.read_csv(n17/'private_execution_receipts.csv'))
-print('Verified: 24 archived generated images, no generation performed')
-```
+`/content/drive/MyDrive/thesis_all/outputs/runs/`
 
-The full FER release gate stays closed until its original classifier artifact
-and preprocessing have been verified. Do not use a substitute pretrained
-emotion model or infer labels from the prompt.
+| Private run | Evidence |
+| --- | --- |
+| `20260818T210720Z_notebook07_affectnet_larger_6aeb3643_f1142664` | N07 baseline |
+| `nb17v2_neutral_expression_12sources_2seeds_sd3pinned` | 24 image receipts and PNGs |
+| `nb18_paired_neutral_pilot_analysis_v1` | N07/N17 strict pairing manifest |
+| `nb21_final_exact_n07_ensemble_fer` | Executed N21 FER rows, final metrics, provisional screenshot QC and untouched manual QC template |
+
+The final public aggregate is [`results/nb21_final_paired_aggregate.csv`](../results/nb21_final_paired_aggregate.csv). Do **not** commit private manifests, image files, execution screenshots, participant IDs or per-image FER/biometric rows.
+
+The archived [Notebook 21](../notebooks/21_final_exact_n07_ensemble_fer.ipynb) performed a gated replay of both N07 FER classifiers and 24 N17 predictions. The earlier N20 notebook is retained as historical provisional work, **not** as a reproducible final evaluator. AI-assisted visual observations do not close independent full-resolution QC. No additional model inference or image generation is necessary for thesis write-up.
