@@ -5,6 +5,8 @@ Can a pretrained image editor alter the biometric identity of a face without dis
 
 This repository accompanies the thesis with **code, an experiment map, result tables, and an explicit scientific audit**. It distinguishes development work from the final held-out experiment. It does **not** claim certified anonymization or clinical fitness.
 
+**Want to see executed cells directly on GitHub?** Open [03 — executed public NB24 results report](notebooks/03_executed_public_results_report.ipynb). Its Python cells were executed against the published aggregate values; it displays the three condition means and the g5.5–g4.5 contrast. **This is a descriptive report, not a rerun of GPU generation, model inference, or the raw bootstrap.**
+
 ## Reproduce the scientific narrative
 
 | Read | Material | Thesis |
