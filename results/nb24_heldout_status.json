@@ -1,0 +1,15 @@
+{
+  "status": "EVALUATION_COMPLETE_QC_PENDING",
+  "generated_verified": 324,
+  "evaluated_rows": 324,
+  "n_sources": 108,
+  "conditions": 3,
+  "biometric_arcface_valid": 324,
+  "biometric_auraface_valid": 324,
+  "original_fer_replay": 108,
+  "niqe_valid": 324,
+  "manual_qc": "PENDING",
+  "validated_privacy_claim": false,
+  "interpretation": "Biometric cosine is technical similarity, not verified re-identification risk. NIQE is naturalness, not clinical fidelity.",
+  "source": "Private Google Drive nb24_unified_heldout_evaluation_frozen_v1; aggregated exports only."
+}
