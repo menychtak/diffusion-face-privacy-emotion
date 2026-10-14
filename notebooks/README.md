@@ -68,3 +68,7 @@ The original private Colab files were located and examined. Public copies contai
 ## What should be uploaded manually?
 
 Only a **verified source or executed** notebook that materially adds traceability and has passed a privacy review. The original code-only N01–N18 files are already publicly accessible at the linked GitHub history, and can be imported later if a self-contained repo is required. For executed notebook copies, use the original Drive/Colab export rather than relying on reconstructed JSON. See [manual import checklist](../docs/notebook_import_checklist.md).
+
+## N25 supplementary executed evaluation
+
+[03 — held-out AU evaluation N25](03_heldout_au_evaluation_N25.ipynb) preserves execution counts and safe text-only results from the Colab run. Its aggregate outputs are in [`results/`](../results/nb25_au_aggregate.csv), with [paired contrasts](../results/nb25_au_paired_contrasts.csv) and [status](../results/nb25_au_run_status.json). The notebook estimates 20 AU features across 432 images; per-image predictions and original faces remain private. It is an exploratory post-hoc evaluation, not generation or manually annotated FACS.
