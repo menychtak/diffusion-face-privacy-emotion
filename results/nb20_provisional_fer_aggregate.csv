@@ -1,0 +1,10 @@
+metric,value,status
+n_sources,12,executed
+n_pairs,24,executed
+original_replay_matches,12,executed
+original_replay_total,12,executed
+n07_emotion_preserved,0.791667,executed
+n17_emotion_preserved,0.458333,executed
+paired_delta,-0.333333,provisional_N07_code_audit_pending
+ci95_low,-0.583333,provisional_N07_code_audit_pending
+ci95_high,-0.083333,provisional_N07_code_audit_pending
