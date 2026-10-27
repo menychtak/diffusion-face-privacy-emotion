@@ -15,7 +15,7 @@ This is a **status ledger**, not a claim that every historical notebook has been
 | N01–N07 initial experiments | Source remains in a private original research archive | Previous development runs and private output folders | **No** for final NB24 claims | Private historical source; not mirrored due to embedded private/large outputs |
 | N19, N20, N22, N22b | **Yes:** verified source-only copies in notebooks/history/ | Original Colab files found with saved execution metadata; N19 initial attempt incomplete, patched N19 executed; N22 includes sensitive visual outputs | **No** for final NB24 claims | Source provenance resolved; cell outputs intentionally private |
 
-## Outstanding publication tasks
+## Optional future publication work (not required for the completed thesis results)
 
 - [x] Rename final generation/evaluation notebooks to follow actual run order.
 - [x] Separate historical experiments from final held-out code.
