@@ -33,7 +33,7 @@ This is an academic reproducibility repository. The **reporting unit** is the or
 
 ## Historical evaluator code mirrored here
 
-These notebooks were imported from the earlier private original research archive archive. **Embedded cell outputs were intentionally removed**: the copies below are **source-only**, even where the original notebook had been run. They are provided for code traceability, not as newly executed evidence.
+These notebooks were imported from the earlier private original research archive. **Embedded cell outputs were intentionally removed**: the copies below are **source-only**, even where the original notebook had been run. They are provided for code traceability, not as newly executed evidence.
 
 | Research topic | Notebook |
 | --- | --- |
@@ -48,7 +48,7 @@ These notebooks were imported from the earlier private original research archive
 | N18: strict pilot pairs | [N18](history/N18_n17v2_strict_paired_evaluation.ipynb) |
 | N21: FER evaluator validation | [N21](history/N21_fer_evaluator_validation.ipynb) |
 
-Earlier N01–N07 notebooks are several megabytes each, and some contain embedded face images; **do not copy those public historical files into this repository unfiltered**. Their precise source links are given in the map above.
+Earlier N01–N07 notebooks are several megabytes each, and some contain embedded face images; **do not copy those private historical files into this repository unfiltered**. Their status is described in the map above.
 
 ## Verified original Colab notebook sources — N19 / N20 / N22
 
