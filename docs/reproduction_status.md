@@ -12,7 +12,7 @@ This is a **status ledger**, not a claim that every historical notebook has been
 | Limited manual QC | Public aggregate in results/ | 36 original/generated comparisons in private checklist | **No** | Review protocol + limited aggregate |
 | N21 FER evaluator audit | Yes, notebooks/history/ | Private run artifact reported; original cell outputs absent from GitHub | **No**, unless specifically verifying a different environment | Historic source-only |
 | N10–N18 evaluator development | Yes, selected sanitized source notebooks in notebooks/history/ | Some original notebooks contain executed cells; these imported versions were stripped of outputs | **No** for the final held-out conclusions | Historic code-only with provenance |
-| N01–N07 initial experiments | Source remains at [thesis_notes](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Previous development runs and private output folders | **No** for final NB24 claims | Linked historical source; not mirrored due to embedded private/large outputs |
+| N01–N07 initial experiments | Source remains at private original research archive | Previous development runs and private output folders | **No** for final NB24 claims | Linked historical source; not mirrored due to embedded private/large outputs |
 | N19, N20, N22, N22b | **Yes:** verified source-only copies in notebooks/history/ | Original Colab files found with saved execution metadata; N19 initial attempt incomplete, patched N19 executed; N22 includes sensitive visual outputs | **No** for final NB24 claims | Source provenance resolved; cell outputs intentionally private |
 
 ## Outstanding publication tasks
