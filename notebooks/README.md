@@ -19,13 +19,13 @@ This is an academic reproducibility repository. The **reporting unit** is the or
 
 | Thesis topic | Experiment or notebook | Where its source currently lives | Execution claim |
 |---|---|---|---|
-| Ch. 5: DDIM, DDPM inversion | N01–N02 | [Historical source archive](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Development history; not final result |
-| Ch. 5: FER-2013 comparison | N03 | [Historical source](https://github.com/menychtak/thesis_notes/blob/main/Notebooks/current/03_fer2013_methods_a_to_g_fer_dino.ipynb) | Development experiment; figures/numbers are historical |
-| Ch. 5: FlowEdit prompt/guidance sweeps | N04–N06c | [Historical sources](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Development/tuning; different denominators |
-| Ch. 4–5: 120 sources / 600 synthetic images | N07 | [Original N07 source](https://github.com/menychtak/thesis_notes/blob/main/Notebooks/current/07_affectnet_final_multi_image_evaluation.ipynb) | Previously executed; **not** final held-out evidence |
-| Ch. 5–6: detector alignment / corrected biometrics | N10–N12 | [Original notebooks](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Previous evaluator development; N12 V3 algorithm used in N24 |
-| Ch. 5–6: FER, exclusion, NIQE | N13–N16 | [Original notebooks](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Prior validation/quality checks |
-| Ch. 5: neutral prompt pilot | N17–N18 | [Original notebooks](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Historical only; **different target prompt** from N23 |
+| Ch. 5: DDIM, DDPM inversion | N01–N02 | Private historical source archive (not publicly accessible) | Development history; not final result |
+| Ch. 5: FER-2013 comparison | N03 | Private historical source (not publicly accessible) | Development experiment; figures/numbers are historical |
+| Ch. 5: FlowEdit prompt/guidance sweeps | N04–N06c | Private historical sources (not publicly accessible) | Development/tuning; different denominators |
+| Ch. 4–5: 120 sources / 600 synthetic images | N07 | Private original N07 source (not publicly accessible) | Previously executed; **not** final held-out evidence |
+| Ch. 5–6: detector alignment / corrected biometrics | N10–N12 | [Public source-only notebooks](history/) | Previous evaluator development; N12 V3 algorithm used in N24 |
+| Ch. 5–6: FER, exclusion, NIQE | N13–N16 | Private original notebooks (not publicly accessible) | Prior validation/quality checks |
+| Ch. 5: neutral prompt pilot | N17–N18 | Private original notebooks (not publicly accessible) | Historical only; **different target prompt** from N23 |
 | FER evaluator parity | N21 | [Historical notebook retained here](history/N21_fer_evaluator_validation.ipynb) | Evaluator-provenance notebook, not main pipeline |
 | Final held-out generation | N23 | [01 — generation](01_heldout_generation_N23.ipynb) | Executed 324/324; original notebook execution remains private |
 | Final unified evaluation | N24 | [02 — evaluation](02_heldout_evaluation_N24.ipynb) | Executed 324/324, 108/108 source FER replay |
@@ -33,7 +33,7 @@ This is an academic reproducibility repository. The **reporting unit** is the or
 
 ## Historical evaluator code mirrored here
 
-These notebooks were imported from the earlier [`thesis_notes/Notebooks/current`](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) archive. **Embedded cell outputs were intentionally removed**: the copies below are **source-only**, even where the original notebook had been run. They are provided for code traceability, not as newly executed evidence.
+These notebooks were imported from the earlier private original research archive archive. **Embedded cell outputs were intentionally removed**: the copies below are **source-only**, even where the original notebook had been run. They are provided for code traceability, not as newly executed evidence.
 
 | Research topic | Notebook |
 | --- | --- |
