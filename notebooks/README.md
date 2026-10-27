@@ -67,7 +67,7 @@ The original private Colab files were located and examined. Public copies contai
 
 ## What should be uploaded manually?
 
-Only a **verified source or executed** notebook that materially adds traceability and has passed a privacy review. The original code-only N01–N18 files are already publicly accessible at the linked GitHub history, and can be imported later if a self-contained repo is required. For executed notebook copies, use the original Drive/Colab export rather than relying on reconstructed JSON. See [manual import checklist](../docs/notebook_import_checklist.md).
+Only a **verified source or executed** notebook that materially adds traceability and has passed a privacy review. Selected sanitized historical notebook sources are publicly available in this repository; other original N01–N18 notebooks remain in the private research archive. Further imports are optional and require a separate privacy review. For executed notebook copies, use the original Drive/Colab export rather than relying on reconstructed JSON. See [manual import checklist](../docs/notebook_import_checklist.md).
 
 ## N25 supplementary executed evaluation
 
