@@ -17,7 +17,7 @@ This repository accompanies the thesis with **code, an experiment map, result ta
 | 4 | [Final condition-level results](results/nb24_heldout_aggregate_by_condition.csv) and [paired contrasts](results/nb24_heldout_paired_contrasts.csv) | Chapter 7 |
 | 5 | [Manual visual QC aggregates](results/nb24_manual_qc_aggregate.csv) | Chapter 7 |
 | 6 | [Scientific audit / interpretation limits](docs/final_scientific_audit_nb24.md) | Chapters 8–10 |
-| 7 | [Historical notebooks (original research archive)](https://github.com/menychtak/thesis_notes/tree/main/Notebooks/current) | Chapter 5 |
+| 7 | Historical notebooks (private original research archive; not publicly accessible) | Chapter 5 |
 
 ### Final experiment
 
